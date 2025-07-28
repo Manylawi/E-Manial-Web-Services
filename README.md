@@ -8,7 +8,7 @@ This project was developed as part of the **Web Design course** at Helwan Nation
 
 ## 📌 Website Link
 
-➡️ [Live Demo]([https://ahmed-web-project-seven.vercel.app](https://manylawi.github.io/E-Manial-Web-Services/])/)
+➡️ [Live Demo](https://manylawi.github.io/E-Manial-Web-Services/)
 
 
 ## 🎯 Purpose

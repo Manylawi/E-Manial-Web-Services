@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurants | e-Manial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="Restaurants.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="fas fa-city"></i> e-Manial
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#restaurants">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservations">Reservations</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="../Cinema/Cinema.html" target="_blank"><i class="fas fa-film"></i>
+                  Cinema</a></li>
+              <li><a class="dropdown-item" href="../Health/Health.html" target="_blank"><i class="fas fa-hospital"></i>
+                  Health</a></li>
+              <li><a class="dropdown-item" href="../Entertainment/Entertainment.html" target="_blank"><i
+                    class="fas fa-masks-theater"></i> Entertainment</a></li>
+              <li><a class="dropdown-item" href="../Transport/Transport.html" target="_blank"><i class="fas fa-bus"></i>
+                  Transport</a></li>
+              <li><a class="dropdown-item" href="../Bills/Bills.html" target="_blank"><i
+                    class="fas fa-file-invoice-dollar"></i> Bills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Manial Restaurants</h1>
+      <p>Discover the finest dining experiences in Manial, Cairo, and book your table with ease.</p>
+      <a href="#restaurants" class="btn">Explore Restaurants</a>
+    </section>
+
+    <section id="restaurants" class="container">
+      <h2 class="section-title">Our Featured Restaurants</h2>
+      <div class="restaurants-grid" id="restaurants-container">
+        <!-- Restaurants will be loaded here dynamically -->
+      </div>
+    </section>
+
+    <section id="reservations" class="container">
+      <h2 class="section-title">Your Reservations</h2>
+      <div class="reservations-box">
+        <div class="table-responsive">
+          <table class="table table-striped" id="reservationsTable">
+            <thead>
+              <tr>
+                <th>Restaurant</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Guests</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Reservations will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Restaurant Modal -->
+  <div class="modal fade" id="restaurantModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRestaurantName"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="restaurantTabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#menuTab">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#reserveTab">Reserve</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#infoTab">Info</a>
+            </li>
+          </ul>
+
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="menuTab">
+              <div id="menuContent"></div>
+            </div>
+
+            <div class="tab-pane fade" id="reserveTab">
+              <div class="reservation-form-container">
+                <form id="reservationForm">
+                  <input type="hidden" id="restaurantId">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="reserveName" class="form-label">Full Name</label>
+                      <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="form-control" id="reserveName" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="reservePhone" class="form-label">Phone Number</label>
+                      <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" class="form-control" id="reservePhone" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="reserveDate" class="form-label">Date</label>
+                      <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" class="form-control" id="reserveDate" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="reserveTime" class="form-label">Time</label>
+                      <div class="input-group">
+                        <i class="fas fa-clock"></i>
+                        <input type="time" class="form-control" id="reserveTime" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="reserveGuests" class="form-label">Number of Guests</label>
+                      <div class="input-group">
+                        <i class="fas fa-users"></i>
+                        <select class="form-control" id="reserveGuests" required>
+                          <option value="1">1 person</option>
+                          <option value="2">2 people</option>
+                          <option value="3">3 people</option>
+                          <option value="4">4 people</option>
+                          <option value="5">5+ people</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn">Confirm Reservation</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="infoTab">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5><i class="fas fa-clock me-2"></i> Opening Hours</h5>
+                  <p id="openingHours"></p>
+                  <h5 class="mt-4"><i class="fas fa-phone me-2"></i> Contact</h5>
+                  <p id="contactInfo"></p>
+                </div>
+                <div class="col-md-6">
+                  <h5><i class="fas fa-map-marker-alt me-2"></i> Location</h5>
+                  <p id="locationInfo"></p>
+                  <div id="mapContainer" style="height: 200px; background: #333;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">e-Manial Restaurant Services</div>
+    <div class="footer-links">
+      <a href="#home" class="footer-link">Home</a>
+      <a href="#restaurants" class="footer-link">Restaurants</a>
+      <a href="#reservations" class="footer-link">Reservations</a>
+    </div>
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="copyright">
+      © 2025 e-Manial Restaurant Services. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Restaurants.js"></script>
+</body>
+
+</html>

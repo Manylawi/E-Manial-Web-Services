@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Manial - City Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-city"></i> e-Manial
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="mainNavLinks">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="Restaurants/Restaurants.html" target="_blank"><i
+                                            class="fas fa-utensils"></i> Restaurants</a></li>
+                                <li><a class="dropdown-item" href="Health/Health.html" target="_blank"><i
+                                            class="fas fa-hospital"></i> Health</a></li>
+                                <li><a class="dropdown-item" href="Cinema/Cinema.html" target="_blank"><i
+                                            class="fas fa-film"></i> Cinema</a></li>
+                                <li><a class="dropdown-item" href="Entertainment/Entertainment.html" target="_blank"><i
+                                            class="fas fa-masks-theater"></i> Entertainment</a></li>
+                                <li><a class="dropdown-item" href="Transport/Transport.html" target="_blank"><i
+                                            class="fas fa-bus"></i> Transport</a></li>
+                                <li><a class="dropdown-item" href="Bills/Bills.html" target="_blank"><i
+                                            class="fas fa-file-invoice-dollar"></i> Bills</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactSection">Contact</a></li>
+                    </ul>
+                    <div id="userNav" class="d-flex"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent"></main>
+
+    <footer id="contactSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-title">About e-Manial</div>
+                    <p class="text-white-50">
+                        e-Manial is the official city services platform for Manial, Cairo. We provide digital access to
+                        all city services for residents and visitors.
+                    </p>
+                    <div class="social-links">
+                        <a href="#contactSection" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#contactSection" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#contactSection" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#contactSection" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-title">Quick Links</div>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li><a href="#services"><i class="fas fa-angle-right me-2"></i>Services</a></li>
+                        <li><a href="#about"><i class="fas fa-angle-right me-2"></i>About Manial</a></li>
+                        <li><a href="#contactSection"><i class="fas fa-angle-right me-2"></i>Contact</a></li>
+                        <li><a href="#faq"><i class="fas fa-angle-right me-2"></i>FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-title">Districts</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Manial</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Garden City</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Zamalek</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Dokki</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Maadi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-title">Contact</div>
+                    <div class="footer-contact"><i class="fas fa-map-marker-alt"></i>Manial, Cairo, Egypt</div>
+                    <div class="footer-contact"><i class="fas fa-envelope"></i>info@e-manial.com</div>
+                    <div class="footer-contact"><i class="fas fa-phone"></i>+20 101 037 8600</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 e-Manial. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

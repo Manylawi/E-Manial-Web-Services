@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manial Transport Hub | e-Manial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="Transport.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="fas fa-city"></i> e-Manial
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="../Restaurants/Restaurants.html" target="_blank"><i
+                    class="fas fa-utensils"></i> Restaurants</a></li>
+              <li><a class="dropdown-item" href="../Health/Health.html" target="_blank"><i
+                     class="fas fa-hospital"></i>
+                  Health</a></li>
+              <li><a class="dropdown-item" href="../Entertainment/Entertainment.html" target="_blank"><i
+                    class="fas fa-masks-theater"></i> Entertainment</a></li>
+              <li><a class="dropdown-item" href="../Cinema/Cinema.html" target="_blank"><i
+                    class="fas fa-film"></i> Cinema</a></li>
+              <li><a class="dropdown-item" href="../Bills/Bills.html" target="_blank"><i
+                    class="fas fa-file-invoice-dollar"></i> Bills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Manial Transport Hub</h1>
+      <p>Navigate Manial and Cairo with ease. Find routes, check station info, and discover the best way to travel.</p>
+
+      <form class="route-search-form" id="route-search">
+        <select id="from-select" required>
+          <option value="" disabled selected>-- Select Starting Point (Manial) --</option>
+          <option value="Manial Corniche, Cairo">Manial Corniche</option>
+          <option value="Manial Main Street, Cairo">Manial Main Street</option>
+          <option value="Near Qasr El Aini Bridge (Manial Side), Cairo">Near Qasr El Aini Bridge (Manial)</option>
+          <option value="Near Galaxy Cinema Manial, Cairo">Near Galaxy Cinema Manial</option>
+          <option value="Near El-Malek El-Saleh Metro, Cairo">Near El-Malek El-Saleh Metro</option>
+        </select>
+
+        <select id="to-select" required>
+          <option value="" disabled selected>-- Select Destination --</option>
+          <option value="Tahrir Square, Cairo">Tahrir Square (Downtown)</option>
+          <option value="Ramses Station, Cairo">Ramses Station (Train/Metro Hub)</option>
+          <option value="Zamalek, Cairo">Zamalek</option>
+          <option value="Maadi, Cairo">Maadi</option>
+          <option value="Nasr City, Cairo">Nasr City</option>
+          <option value="Heliopolis, Cairo">Heliopolis</option>
+          <option value="Cairo International Airport">Cairo International Airport</option>
+          <option value="Giza Pyramids">Giza Pyramids</option>
+          <option value="Khan el-Khalili, Cairo">Khan el-Khalili</option>
+          <option value="Dokki, Giza">Dokki</option>
+          <option value="Mohandessin, Giza">Mohandessin</option>
+          <option value="New Cairo">New Cairo</option>
+          <option value="6th of October City">6th of October City</option>
+        </select>
+
+        <button type="submit" id="find-route-btn"><i class="fas fa-map-marked-alt"></i> Show Route on Map</button>
+      </form>
+    </section>
+
+    <section id="transport-options" class="container">
+      <h2 class="section-title">Transportation Options</h2>
+      <div class="transport-grid">
+        <a href="https://www.cairometro.gov.eg/en/Maps" target="_blank" rel="noopener noreferrer" class="transport-card-link">
+          <div class="transport-card">
+            <h3><i class="fas fa-subway"></i> Cairo Metro</h3>
+            <p>Connects Manial indirectly via Line 1. Use nearby stations like El-Malek El-Saleh or Al-Sayeda Zeinab. Click for the official map.</p>
+            <div class="availability-status">
+              Status: <span class="status status-high" id="metro-status">Good Availability</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#routes-in-manial" class="transport-card-link">
+          <div class="transport-card">
+            <h3><i class="fas fa-bus-alt"></i> Public Buses</h3>
+            <p>Numerous CTA & Mwasalat Misr routes run along Kasr El Aini St. and Corniche El Nil, connecting to major areas. Check stops or apps.</p>
+            <div class="availability-status">
+              Status: <span class="status status-medium" id="bus-status">Moderate Availability</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#routes-in-manial" class="transport-card-link">
+          <div class="transport-card">
+            <h3><i class="fas fa-shuttle-van"></i> Microbuses</h3>
+            <p>Fast, flexible routes to Tahrir, Ramses, Giza, Sayeda Zeinab, etc. Hail along main streets. Confirm destination.</p>
+            <div class="availability-status">
+              Status: <span class="status status-high" id="microbus-status">High Availability</span>
+            </div>
+          </div>
+        </a>
+        
+        <div class="transport-card">
+          <h3><i class="fas fa-taxi"></i> Taxis & Ride-Sharing</h3>
+          <p>Standard taxis, Uber, and Careem are widely available. Use ride-sharing apps for convenience and pricing.</p>
+          <div class="availability-status">
+            Status: <span class="status status-high" id="taxi-status">Usually Available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="routes-in-manial" class="routes-section container">
+      <h2 class="section-title">Bus & Microbus Routes Through Manial</h2>
+      <p style="text-align: center; margin-bottom: 2rem; color: #b8b8b8;">
+        Below are examples of common bus and microbus routes serving the Manial area.
+        Note that microbus routes can be less formal and stops are often flexible.
+        Always confirm the route and destination with the driver.
+      </p>
+
+      <div class="route-list">
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., Mwasalat Misr)</h3>
+          <span class="route-number">Route Example #123</span>
+          <p>Connects Manial to Downtown and other key areas.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Kasr El Aini Street (various stops)</li>
+            <li>Corniche El Nil (various stops)</li>
+            <li>Near Qasr El Aini Hospital</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Tahrir Square</li>
+            <li>Ramses Station</li>
+            <li>Abbasseya (via connections)</li>
+            <li>Maadi (via connections)</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Tahrir)</h3>
+          <span class="route-number">Route Example: Manial - Tahrir</span>
+          <p>A frequent route for quick access to Downtown.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Manial Main Street</li>
+            <li>Near Galaxy Cinema</li>
+            <li>Along Kasr El Aini Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Tahrir Square (various drop-off points)</li>
+            <li>Near Abdel Moneim Riad Station</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Giza)</h3>
+          <span class="route-number">Route Example: Manial - Giza Square</span>
+          <p>Connects Manial to Giza side via bridges.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Near Qasr El Aini Bridge (Manial side)</li>
+            <li>Manial Main Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Giza Square (various drop-off points)</li>
+            <li>Near Giza Metro Station</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., to Nasr City)</h3>
+          <span class="route-number">Route Example #456</span>
+          <p>Connects Manial to Nasr City area.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Kasr El Aini Street</li>
+            <li>Corniche El Nil</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Abbasseya</li>
+            <li>Salah Salem Road</li>
+            <li>Nasr City</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Sayeda Zeinab)</h3>
+          <span class="route-number">Route Example: Manial - Sayeda Zeinab</span>
+          <p>Short route connecting Manial to Sayeda Zeinab area and Metro station.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Manial Main Street</li>
+            <li>Near El-Malek El-Saleh Metro</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Sayeda Zeinab Metro Station</li>
+            <li>Sayeda Zeinab Square</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., to Maadi)</h3>
+          <span class="route-number">Route Example #789</span>
+          <p>Connects Manial to Maadi area.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Corniche El Nil</li>
+            <li>Kasr El Aini Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Old Maadi</li>
+            <li>New Maadi</li>
+            <li>Maadi Corniche</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Dokki/Mohandessin)</h3>
+          <span class="route-number">Route Example: Manial - Dokki/Mohandessin</span>
+          <p>Connects Manial to the Dokki and Mohandessin areas in Giza.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Near Qasr El Aini Bridge (Manial side)</li>
+            <li>Manial Main Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Dokki Square</li>
+            <li>Mohandessin</li>
+            <li>Gameat El Dowal El Arabeya Street</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., to Ramses)</h3>
+          <span class="route-number">Route Example #101</span>
+          <p>Direct route connecting Manial to Ramses Station.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Kasr El Aini Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Ramses Station</li>
+            <li>Attaba Square</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Zamalek)</h3>
+          <span class="route-number">Route Example: Manial - Zamalek</span>
+          <p>Connects Manial to the island of Zamalek.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Near Qasr El Aini Bridge (Manial side)</li>
+            <li>Corniche El Nil</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Zamalek (various stops)</li>
+            <li>Gezira</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., to Giza Pyramids)</h3>
+          <span class="route-number">Route Example #202</span>
+          <p>Bus route that can take you towards the Giza Pyramids area.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Kasr El Aini Street</li>
+            <li>Corniche El Nil</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Giza Square</li>
+            <li>Pyramids Area (may require transfer)</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-shuttle-van"></i> Example Microbus Route (e.g., to Khan el-Khalili)</h3>
+          <span class="route-number">Route Example: Manial - Khan el-Khalili</span>
+          <p>Connects Manial to the historic Khan el-Khalili area.</p>
+          <strong>Key Points/Hailing Spots in Manial:</strong>
+          <ul>
+            <li>Manial Main Street</li>
+            <li>Along Kasr El Aini Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Khan el-Khalili</li>
+            <li>Al-Azhar area</li>
+          </ul>
+        </div>
+
+        <div class="route-card">
+          <h3><i class="fas fa-bus"></i> Example Bus Route (e.g., Ring Road connections)</h3>
+          <span class="route-number">Route Example #303</span>
+          <p>Bus route connecting to areas accessible via the Ring Road.</p>
+          <strong>Key Points/Stops near Manial:</strong>
+          <ul>
+            <li>Kasr El Aini Street</li>
+          </ul>
+          <strong>Typical Destinations:</strong>
+          <ul>
+            <li>Areas along the Ring Road</li>
+            <li>New Cairo (via transfer)</li>
+            <li>6th of October City (via transfer)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="map-info-section" class="container">
+      <h2 class="section-title">Route Information</h2>
+      <div id="route-status">
+        <p>Select your start point in Manial and your destination, then click "Show Route on Map" to open public transport directions in Google Maps.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-transport">
+    <div class="footer-logo">e-Manial Transport Services</div>
+    <div class="footer-links">
+      <a href="#transport-options" class="footer-link">Transport Options</a>
+      <a href="#routes-in-manial" class="footer-link">Routes</a>
+      <a href="#" class="footer-link">Home</a>
+    </div>
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; 2025 e-Manial Transport Services. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Transport.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Maniel - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center centered-wrapper">
+        <div class="login-container">
+            <div class="login-logo">
+                <i class="fas fa-city fa-3x" style="color: var(--accent-color);"></i>
+                <h1 class="mt-2">e-Manial</h1>
+                <p class="text-muted">Manial, Cairo - City Services</p>
+            </div>
+            <h2 class="login-title">Welcome Back</h2>
+            <div id="errorMessage" class="alert alert-danger error-message" role="alert"></div>
+            <form id="loginForm" autocomplete="off">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Email" required
+                        autocomplete="username">
+                </div>
+                <div class="mb-3 password-container">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password" required
+                        autocomplete="current-password">
+                    <i class="fas fa-eye password-toggle" id="loginPasswordToggle"></i>
+                </div>
+                <button type="submit" class="btn login-btn">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </button>
+            </form>
+            <div class="login-links text-center mt-3">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

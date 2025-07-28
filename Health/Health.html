@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manial Health | e-Manial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="Health.css">
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-city"></i> e-Manial
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="../Restaurants/Restaurants.html" target="_blank"><i
+                                        class="fas fa-utensils"></i> Restaurants</a></li>
+                            <li><a class="dropdown-item" href="../Transport/Transport.html" target="_blank"><i
+                                        class="fas fa-bus"></i> Transport</a></li>
+                            <li><a class="dropdown-item" href="../Entertainment/Entertainment.html" target="_blank"><i
+                                        class="fas fa-masks-theater"></i> Entertainment</a></li>
+                            <li><a class="dropdown-item" href="../Cinema/Cinema.html" target="_blank"><i
+                                        class="fas fa-film"></i> Cinema</a></li>
+                            <li><a class="dropdown-item" href="../Bills/Bills.html" target="_blank"><i
+                                        class="fas fa-file-invoice-dollar"></i> Bills</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="hero">
+            <h1>Manial Health Services</h1>
+            <p>Find the best hospitals, clinics, and doctors in Manial, Cairo. Book appointments and access quality
+                healthcare with ease.</p>
+            <a href="#hospitals-section" class="btn">Find Healthcare Providers</a>
+        </section>
+
+        <section id="hospitals-section" class="container">
+            <h2 class="section-title">Hospitals & Clinics in Manial</h2>
+            <div class="hospitals-grid">
+                <div class="hospital-card" data-hospital-name="Al Salam International Hospital">
+                    <img src="https://medpharo.com/storage/2023/11/26/s-salaam-hospital-1700989607.jpg"
+                        alt="Al Salam International Hospital" class="hospital-img">
+                    <div class="hospital-info">
+                        <h3 class="hospital-name">Al Salam International Hospital</h3>
+                        <p class="hospital-location"><i class="fas fa-map-marker-alt"></i> Corniche El Nil, Manial</p>
+                        <div class="hospital-facilities">
+                            <span class="facility-tag">Cardiology</span>
+                            <span class="facility-tag">Pediatrics</span>
+                            <span class="facility-tag">Laboratory</span>
+                        </div>
+                        <div class="hospital-action">
+                            <div class="hospital-rating"><i class="fas fa-star"></i> 4.5</div>
+                            <button class="view-btn">View Doctors</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hospital-card" data-hospital-name="Dar El Fouad Hospital">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZw2wA6yMELcWLAWyhNQecR-QHjRPjzxcZVw&s"
+                        alt="Dar El Fouad Hospital" class="hospital-img">
+                    <div class="hospital-info">
+                        <h3 class="hospital-name">Dar El Fouad Hospital</h3>
+                        <p class="hospital-location"><i class="fas fa-map-marker-alt"></i> 26th of July Corridor, Giza
+                        </p>
+                        <div class="hospital-facilities">
+                            <span class="facility-tag">Oncology</span>
+                            <span class="facility-tag">Neurology</span>
+                            <span class="facility-tag">Surgery</span>
+                        </div>
+                        <div class="hospital-action">
+                            <div class="hospital-rating"><i class="fas fa-star"></i> 4.7</div>
+                            <button class="view-btn">View Doctors</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doctors-section" class="doctors-section container">
+            <h2 class="section-title">Available Doctors</h2>
+            <div class="doctors-filter">
+                <button class="filter-btn active" data-filter="all">All Specialties</button>
+                <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+                <button class="filter-btn" data-filter="neurology">Neurology</button>
+                <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+                <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+                <button class="filter-btn" data-filter="dentistry">Dentistry</button>
+                <button class="filter-btn" data-filter="dermatology">Dermatology</button>
+                <button class="filter-btn" data-filter="ophthalmology">Ophthalmology</button>
+                <button class="filter-btn" data-filter="surgery">Surgery</button>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card" data-category="orthopedics">
+                    <div class="doctor-photo-placeholder">Dr. Hany Kamal</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Hany Kamal</h3>
+                        <div class="doctor-info"><span>Orthopedics</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.6</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Hany Kamal')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="dentistry">
+                    <div class="doctor-photo-placeholder">Dr. Nada Samir</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Nada Samir</h3>
+                        <div class="doctor-info"><span>Dentistry</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.5</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Nada Samir')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="dermatology">
+                    <div class="doctor-photo-placeholder">Dr. Karim Adel</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Karim Adel</h3>
+                        <div class="doctor-info"><span>Dermatology</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.4</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Karim Adel')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="ophthalmology">
+                    <div class="doctor-photo-placeholder">Dr. Laila Farouk</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Laila Farouk</h3>
+                        <div class="doctor-info"><span>Ophthalmology</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.7</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Laila Farouk')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="surgery">
+                    <div class="doctor-photo-placeholder">Dr. Omar Sherif</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Omar Sherif</h3>
+                        <div class="doctor-info"><span>General Surgery</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.8</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Omar Sherif')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="cardiology">
+                    <div class="doctor-photo-placeholder">Dr. Rania Hassan</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Rania Hassan</h3>
+                        <div class="doctor-info"><span>Cardiology</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.9</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Rania Hassan')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="neurology">
+                    <div class="doctor-photo-placeholder">Dr. Tarek Mohamed</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Tarek Mohamed</h3>
+                        <div class="doctor-info"><span>Neurology</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.6</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Tarek Mohamed')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card" data-category="pediatrics">
+                    <div class="doctor-photo-placeholder">Dr. Dina Waleed</div>
+                    <div class="doctor-overlay">
+                        <h3 class="doctor-name">Dr. Dina Waleed</h3>
+                        <div class="doctor-info"><span>Pediatrics</span>
+                            <div class="doctor-rating"><i class="fas fa-star"></i> 4.7</div>
+                        </div>
+                        <p class="doctor-hospitals">Available at: ...</p>
+                        <button class="book-btn" onclick="openBookingModal('Dina Waleed')">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Booking -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="bookingForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel"><i class="fas fa-calendar-check me-2"></i> Book
+                            an Appointment</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="selectedDoctor">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Your Name</label>
+                            <input type="text" id="userName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userPhone" class="form-label">Phone Number</label>
+                            <input type="tel" id="userPhone" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookingDate" class="form-label">Appointment Date</label>
+                            <input type="date" id="bookingDate" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="startTime" class="form-label">Start Time</label>
+                                <input type="time" id="startTime" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="hours" class="form-label">Duration (hours)</label>
+                                <input type="number" id="hours" class="form-control" min="1" max="4" value="1" required>
+                            </div>
+                        </div>
+                        <div class="alert alert-info mt-3">
+                            <i class="fas fa-info-circle me-2"></i> Consultation fee is 200 EGP per hour (non-refundable
+                            on cancellation)
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn book-btn">Confirm Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-health">
+        <div class="footer-logo">e-Manial Health Services</div>
+        <div class="footer-links">
+            <a href="#hospitals-section" class="footer-link">Hospitals</a>
+            <a href="#doctors-section" class="footer-link">Doctors</a>
+            <a href="#" class="footer-link">Home</a>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            © 2025 e-Manial Health Services. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="Health.js"></script>
+</body>
+
+</html>

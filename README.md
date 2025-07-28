@@ -23,10 +23,10 @@ To offer a simple, clean, and responsive interface that brings together multiple
 
 ## 👥 Team Members
 
-This project was developed in collaboration with an amazing team of students.  
-Ahmed Said
-Ahmed Reda
-Ahmed Ali
-Mohamed Hazem
+This project was developed in collaboration with an amazing team of students.
+- Ahmed Said
+- Ahmed Reda
+- Ahmed Ali
+- Mohamed Hazem
 
 ### ©️ 2025 | Helwan National University – Faculty of Engineering

@@ -30,3 +30,8 @@ This project was developed in collaboration with an amazing team of students.
 - Mohamed Hazem
 
 ### ©️ 2025 | Helwan National University – Faculty of Engineering
+## 🔐 License
+
+This project is licensed under **Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**.  
+You may view it [here](https://creativecommons.org/licenses/by-nc/4.0/).
+

@@ -1,0 +1,470 @@
+:root {
+    --primary-color: #111111;
+    --secondary-color: #333333;
+    --accent-color: #8B4513;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --text-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    margin: 0;
+    /* Remove default body margin to prevent gaps */
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--accent-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 10px;
+    transition: all 0.3s;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.dropdown-menu {
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item.disabled,
+.nav-link.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.dropdown-item:hover {
+    background-color: #222;
+    color: var(--accent-color);
+}
+
+.dropdown-item i {
+    color: var(--accent-color);
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://arabmls.org/wp-content/uploads/2024/07/Roda-Island-Cairo-Egypt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    /* Remove all margins to eliminate gaps */
+    padding: 3rem 1rem;
+    /* Adjusted padding to remove bottom padding */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-btn:hover {
+    background-color: #A0522D;
+    color: white;
+}
+
+.gallery-section {
+    padding: 50px 0 30px 0;
+    background: #181818;
+}
+
+.gallery-title {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+.about-manial {
+    padding: 60px 0;
+    background-color: var(--dark-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--accent-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+}
+
+.about-content {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+.wikipedia-section {
+    padding: 40px 0;
+    background: #191919;
+}
+
+.wikipedia-title {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.wikipedia-content {
+    background: rgba(30, 30, 30, 0.93);
+    border-radius: 10px;
+    padding: 30px;
+    color: #eee;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+}
+
+.services {
+    padding: 60px 0;
+    background-color: var(--primary-color);
+}
+
+.service-card {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
+}
+
+.service-icon {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 2.5rem;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.service-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.service-text {
+    color: #aaa;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.service-link {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+.user-profile {
+    padding: 60px 0;
+    background-color: var(--dark-color);
+}
+
+.profile-card {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #444;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-header {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-info {
+    padding: 30px;
+    color: #ddd;
+}
+
+.info-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.wallet-card {
+    background: linear-gradient(135deg, #5a3921, #8B4513);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.wallet-balance {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.reservation-item {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.map-section {
+    padding: 60px 0;
+    background-color: var(--primary-color);
+}
+
+.map-container {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+}
+
+footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 60px 0 0;
+    margin-top: auto;
+    border-top: 1px solid var(--accent-color);
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.not-logged-in {
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--dark-color);
+}
+
+.login-prompt {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #444;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-name {
+        font-size: 1.4rem;
+    }
+}
